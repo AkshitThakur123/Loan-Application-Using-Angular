@@ -10,5 +10,5 @@ export class AppComponent {
   title="tdforms";
   loans = ['Home Loan','Personal Loan','Business Loan','Student Loan'];
 
-  userModel = new User('','akshit@gmail.com',8988330175,'','abc','zxy','jkl',true);
+  userModel = new User('Akshit','akshit@gmail.com',8988330175,'','abc','zxy','jkl',true);
 }
