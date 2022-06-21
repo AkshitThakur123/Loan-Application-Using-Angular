@@ -1,0 +1,83 @@
+<div class="container-fluid mb-5">
+ 
+  
+  <h3 align="center"><strong> Loan Application Form</strong></h3>
+  <form #userForm="ngForm">
+    
+
+    
+    <div class="form-group">
+      <label>Enter your Name: </label>
+      <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" name="name" [(ngModel)]="userModel.name">
+      <small class="text-danger" [class.d-none]="name.valid || name.untouched" >Your name is required</small>
+    </div>
+  
+    <div class="form-group">
+      <label>Enter your Email: </label>
+      <input type="email" required #email="ngModel" [class.is-invalid]="email.invalid && email.touched" class="form-control" name="email" [ngModel]="userModel.email">
+      <small class="text-danger" [class.d-none]="email.valid || email.untouched" >Your email is mandatory</small>
+    </div><br>
+    
+
+    <div class="form-group">
+      <label>Enter your Phone Number: </label>
+      <input type="tel" #phone="ngModel" pattern="^\d{10}$" required [class.is-invalid]="phone.invalid && phone.touched" class="form-control" name ="number" [ngModel]="userModel.phone"> 
+    <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">Phone number required and must be of 10 digits</small>
+    </div>
+    
+    <br>
+
+    <div class="form-group">
+      <select class="custom-select" name="topic" >
+        <option selected>Interested in</option>
+        <option *ngFor="let loan of loans">{{loan}}</option>
+      </select>
+    </div><br>
+
+    
+      <label>Gender</label>
+      <div class="form-check">
+        <input class="form-check-input"  [ngModel]="userModel.gender" type="radio" name="gender" value="male">
+        <label class="form-check-label">Male</label>
+      </div>
+      <br>
+
+      <div class="form-check">
+        <input class="form-check-input" [ngModel]="userModel.gender" type="radio" name="gender" value="female">
+        <label class="form-check-label">Female</label>
+      </div>
+    <br>
+
+    
+    <div ngModelGroup="address">
+      <div class="form-group">
+        <label>Street: </label>
+        <input type="text" required #street="ngModel" [class.is-invalid]="street.invalid && street.touched" class="form-control" name="street" [ngModel]="userModel.street" >
+        <small class="text-danger" [class.d-none]="street.valid || street.untouched">Please enter your street first</small>
+      </div>
+       <br>
+      <div class="form-group">
+        <label>City: </label>
+        <input type="text" required #city="ngModel" [class.is-invalid]="city.invalid && city.touched" class="form-control" name="city" [ngModel]="userModel.city">
+        <small class="text-danger" [class.d-none]="city.valid || city.untouched">Please enter your street first</small>
+      </div>
+      <br>
+      <div class="form-group">
+        <label>State: </label>
+        <input type="text" required #state="ngModel" [class.is-invalid]="state.invalid && state.touched" class="form-control" name="state"[ngModel]=userModel.state >
+        <small class="text-danger" [class.d-none]="state.valid || state.untouched">Please enter your state first</small>
+      </div>
+      <br>
+    <div class="form-check mb-3">
+      <input class="form-check-input" name="subscribe" type="checkbox">
+      <label class="form-check-label">
+        Send me updates for loan offers
+      </label>
+    </div>
+    </div>
+    <br>
+
+    <button id="sbmt" class="btn btn-primary" type="submit">Submit form</button>
+
+  </form>
+  </div>

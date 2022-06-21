@@ -1,0 +1,112 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan website</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+  </head>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><strong>Jocata Bank</strong></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <hr class="container px-4">
+        <body class="row gx-5">
+          <div class="col">
+        <br>
+        <p id="firstp"> One Stop Shop for <br>Multiple Products<br> It may take longer than expected, but it’s worth it in the end</p>
+        </div>
+        <div>
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="C:\Users\HP\OneDrive\Desktop\Loan project1\loan1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="C:\Users\HP\OneDrive\Desktop\Loan project1\loan2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="C:\Users\HP\Downloads\loan3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      <div class="card text-center">
+        <div class="card-header">
+          <strong>Various Catagories</strong>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Personal Loans</h5>
+          <p class="card-text">A sum of money borrowed from a financial institution or bank to purchase a house. Home loans consist of an adjustable or fixed interest rate and payment terms.</p>
+         
+        </div>
+        
+        <div class="card-body">
+            <h5 class="card-title">Vehicle Loans</h5>
+            <p class="card-text">Vehicle Loan means a motor vehicle installment sales contract assigned to the Company that is secured by title to, security interests in, or liens on a motor vehicle under applicable provisions of the motor vehicle or other similar law of the jurisdiction in which the motor vehicle is title and registered by the purchaser at the time the contract is originated or purchased.</p>
+          
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title">House Loans</h5>
+            <p class="card-text">A home loan (or mortgage) is a contract between a borrower and a lender that allows someone to borrow money to buy a house, apartment, condo, or other livable property. A home loan is typically paid back over a term of 10, 15 or 30 years.</p>
+            
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title">Insurance Loan</h5>
+            <p class="card-text">A loan on which payment is guaranteed by an insurance company, especially one with a high credit rating. An insured loan is protected against default because, if default does occur, the insurance company will pay the lender what is owed.</p>
+           
+          </div>
+      </div>
+
+      <div class="base">
+        <p><strong>Changing lives one member at a time!</strong></p>
+      
+      </div>
+
+      <div id = "bank">
+        <a [routerLink]="['./Bank']" class="btn btn-primary">Select Loan Type</a>
+      </div>
+      <router-outlet></router-outlet>
+    </body>
+</html>
